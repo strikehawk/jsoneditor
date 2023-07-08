@@ -154,13 +154,6 @@ export class ErrorTable {
       } else {
         this.dom.validationErrorsContainer.onscroll = undefined
       }
-
-      const height = this.dom.validationErrorsContainer.clientHeight + (this.dom.statusBar ? this.dom.statusBar.clientHeight : 0)
-      // this.content.style.marginBottom = (-height) + 'px';
-      // this.content.style.paddingBottom = height + 'px';
-      this.onChangeHeight(height)
-    } else {
-      this.onChangeHeight(0)
     }
 
     // update the status bar

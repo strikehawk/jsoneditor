@@ -343,13 +343,6 @@ textmode.create = function (container, options = {}) {
       if (!isNaN(line)) {
         me.setTextSelection({ row: line, column: 1 }, { row: line, column: 1000 })
       }
-    },
-    onChangeHeight: function (height) {
-      // TODO: change CSS to using flex box, remove setting height using JavaScript
-      const statusBarHeight = me.dom.statusBar ? me.dom.statusBar.clientHeight : 0
-      const totalHeight = height + statusBarHeight + 1
-      me.content.style.marginBottom = (-totalHeight) + 'px'
-      me.content.style.paddingBottom = totalHeight + 'px'
     }
   })
   this.frame.appendChild(this.errorTable.getErrorTable())

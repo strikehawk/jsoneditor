@@ -265,14 +265,7 @@ previewmode.create = function (container, options = {}) {
     onToggleVisibility: function () {
       me.validate()
     },
-    onFocusLine: null,
-    onChangeHeight: function (height) {
-      // TODO: change CSS to using flex box, remove setting height using JavaScript
-      const statusBarHeight = me.dom.statusBar ? me.dom.statusBar.clientHeight : 0
-      const totalHeight = height + statusBarHeight + 1
-      me.content.style.marginBottom = (-totalHeight) + 'px'
-      me.content.style.paddingBottom = totalHeight + 'px'
-    }
+    onFocusLine: null
   })
 
   this.frame.appendChild(this.content)

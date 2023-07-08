@@ -1,5 +1,5 @@
 {
-  "name": "jsoneditor",
+  "name": "@strikehawk/jsoneditor",
   "version": "9.10.2",
   "main": "./dist/jsoneditor.min.js",
   "description": "A web-based tool to view, edit, format, and validate JSON",
@@ -9,14 +9,18 @@
     "viewer",
     "formatter"
   ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Jos de Jong <wjosdejong@gmail.com>",
   "license": "Apache-2.0",
   "homepage": "https://jsoneditoronline.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josdejong/jsoneditor.git"
+    "url": "https://github.com/strikehawk/jsoneditor.git"
   },
-  "bugs": "https://github.com/josdejong/jsoneditor/issues",
+  "bugs": "https://github.com/strikehawk/jsoneditor/issues",
   "scripts": {
     "build": "gulp",
     "minify": "gulp minify",

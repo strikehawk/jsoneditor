@@ -9,6 +9,11 @@
   position: relative;
   padding: 0;
   line-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 div.jsoneditor-field,
 div.jsoneditor-value,
@@ -224,28 +229,12 @@ div {
   &.jsoneditor-outer {
     position: static;
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    &.has-nav-bar {
-      margin-top: -26px;
-      padding-top: 26px;
-      &.has-main-menu-bar {
-        margin-top: -61px;
-        padding-top: 61px;
-      }
-    }
-    &.has-status-bar {
-      margin-bottom: -26px;
-      padding-bottom: 26px;
-    }
-    &.has-main-menu-bar {
-      margin-top: -35px;
-      padding-top: 35px;
-    }
+    flex: 1;
   }
   &.jsoneditor-busy {
     position: absolute;
@@ -488,6 +477,7 @@ pre.jsoneditor-preview,
   .jsoneditor-validation-errors-container {
     max-height: 130px;
     overflow-y: auto;
+    position: relative;
   }
   .jsoneditor-validation-errors {
     width: 100%;
@@ -496,7 +486,7 @@ pre.jsoneditor-preview,
   .jsoneditor-additional-errors {
     position: absolute;
     margin: auto;
-    bottom: 31px;
+    bottom: 5px;
     left: calc(50% - 92px);
     color: $jse-readonly;
     background-color: $jse-light-bg;
